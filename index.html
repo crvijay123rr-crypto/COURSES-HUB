@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COURSES HUB</title><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"><style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+min-height:100vh;
+color:#fff;
+}
+
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:700;
+}
+
+.hero p{
+margin-top:10px;
+color:#cbd5e1;
+}
+
+.search-box{
+max-width:500px;
+margin:25px auto;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+font-size:16px;
+}
+
+.telegram{
+display:inline-block;
+padding:12px 25px;
+background:#229ED9;
+color:#fff;
+text-decoration:none;
+border-radius:12px;
+font-weight:600;
+margin-top:15px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.1);
+padding:25px;
+border-radius:20px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:20px;
+}
+
+.card p{
+color:#cbd5e1;
+margin-bottom:15px;
+font-size:14px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 18px;
+background:#facc15;
+color:#000;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#94a3b8;
+}
+</style></head><body><section class="hero">
+<h1>🎓 COURSES HUB</h1>
+<p>All Premium Courses Available</p><div class="search-box">
+<input type="text" id="search" placeholder="Search Course...">
+</div><a class="telegram" href="https://t.me/YOUR_CHANNEL">
+Join Telegram
+</a>
+</section><div class="container"><div class="grid" id="courses"><div class="card">
+<h3>🔬 2nd Grade Science Master Batch</h3>
+<p>Recorded Classroom Course</p>
+<a class="btn" href="2nd_Grade_2nd_Paper_Science_Batch_Recorded_From_J_Xtractor_xx (1).html">Open</a>
+</div><div class="card">
+<h3>🌾 Agriculture Supervisor 2026</h3>
+<p>Complete Premium Batch</p>
+<a class="btn" href="AGRICULTURE_SUPERVISOR_2026_NEW_BATCH_01_01_2026_16_@itzAnandXD.html">Open</a>
+</div><div class="card">
+<h3>🎯 CET 10+2 Premium Batch</h3>
+<p>Sorted Course Collection</p>
+<a class="btn" href="CET_(10+2)_(B-07)_Feb_2026__Jaipur_Sorted.html">Open</a>
+</div><div class="card">
+<h3>🏆 CET 10+2 Jaipur Classroom</h3>
+<p>Live Classroom Batch</p>
+<a class="btn" href="CET_(10+2)_(B-07)_Feb_2026__Jaipur.html">Open</a>
+</div><div class="card">
+<h3>💻 Computer Anudeshak Complete Batch</h3>
+<p>Live + Recorded Course</p>
+<a class="btn" href="Computer_Anudeshak_Live_+_Recorded_+_Tech_&_NonTech_Book_Bundle.html">Open</a>
+</div><div class="card">
+<h3>👑 CR Choudhary Selection Batch</h3>
+<p>Special Selection Program</p>
+<a class="btn" href="CR CHOUDHARY 💀 Selection_Batch-1.html">Open</a>
+</div><div class="card">
+<h3>📚 LDC Complete Classroom Batch</h3>
+<p>Lower Division Clerk Course</p>
+<a class="btn" href="Lower_Division_Clerk_LDC_Batch_From_Jaipur_Classroom_1_1.html">Open</a>
+</div><div class="card">
+<h3>🛡️ SSC GD 2026 Study Material</h3>
+<p>Complete Notes & Material</p>
+<a class="btn" href="SSC GD Constable 2026 Study Material .html">Open</a>
+</div><div class="card">
+<h3>📝 SSC GD Premium Test Series</h3>
+<p>Practice & Mock Tests</p>
+<a class="btn" href="SSC GD TEST SERIES.html">Open</a>
+</div><div class="card">
+<h3>🚀 SSC CGL Foundation Batch</h3>
+<p>Foundation Classroom Program</p>
+<a class="btn" href="SSC_CGL_Foundation_Batch_(From_Jodhpur_Classroom)_Sorted.html">Open</a>
+</div></div></div><footer>
+© 2026 Courses Hub | Powered by CR Choudhary
+</footer><script>
+let search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+let filter=this.value.toLowerCase();
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+let text=card.innerText.toLowerCase();
+card.style.display=text.includes(filter)?"block":"none";
+});
+});
+</script></body>
+</html>
