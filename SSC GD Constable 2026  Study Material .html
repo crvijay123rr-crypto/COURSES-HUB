@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC GD Constable 2026  Study Material  | CodeNova</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --bg: #fafafa;
+            --card: #ffffff;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0,0,0,0.1);
+            --radius: 10px;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dark-mode {
+            --primary: #818cf8;
+            --primary-dark: #6366f1;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f1f5f9;
+            --text-light: #94a3b8;
+            --border: #334155;
+            --shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            transition: var(--transition);
+            min-height: 100vh;
+            padding: 16px;
+            background-image: radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header-wrapper {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--bg);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+            margin-bottom: 24px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .back-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text);
+            font-size: 16px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateX(-2px);
+        }
+        .home-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text);
+            font-size: 16px;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .home-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+        .title-section {
+            flex: 1;
+        }
+        .main-title {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .file-info {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 4px;
+            display: flex;
+            gap: 12px;
+        }
+        .time-display {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
+        }
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .theme-toggle {
+            position: relative;
+            width: 56px;
+            height: 28px;
+        }
+        .theme-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .theme-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            border-radius: 50px;
+        }
+        .theme-slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 4px;
+            bottom: 3px;
+            background: var(--primary);
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+        input:checked + .theme-slider:before {
+            transform: translateX(28px);
+        }
+        .theme-icons {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none;
+            color: var(--text-light);
+            font-size: 12px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        .stat-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .stat-card.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+        }
+        .stat-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .stat-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .stat-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .video-stat { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+        .image-stat { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .audio-stat { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+        .pdf-stat { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+        .other-stat { background: rgba(100, 116, 139, 0.1); color: #64748b; }
+        .stat-numbers {
+            flex: 1;
+        }
+        .stat-count {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .section-header {
+            padding: 18px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            flex: 1;
+        }
+        .items-count {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text-light);
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        .section-controls {
+            display: flex;
+            gap: 10px;
+        }
+        .filter-btn {
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            background: var(--bg);
+            color: var(--text-light);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .cards-grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        .category-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            min-height: 85px;
+            display: flex;
+            flex-direction: column;
+        }
+        .category-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+        }
+        .category-card:hover:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        .category-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-meta {
+            font-size: 11px;
+            color: var(--text-light);
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .category-icon {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+        }
+        .item-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            min-height: 75px;
+            display: flex;
+            flex-direction: column;
+        }
+        .item-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .item-title {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text);
+            flex: 1;
+        }
+        .item-type {
+            font-size: 9px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+        .video-type { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+        .image-type { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .audio-type { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+        .pdf-type { background: rgba(245, 158, 11, 0.1); color: #f59e0b; }
+        .other-type { background: rgba(100, 116, 139, 0.1); color: #64748b; }
+        .item-url {
+            font-size: 10px;
+            color: var(--text-light);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: auto;
+            display: none;
+        }
+        .preview-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .preview-overlay.active {
+            display: flex;
+        }
+        .preview-container {
+            background: var(--card);
+            border-radius: var(--radius);
+            width: 100%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .preview-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .preview-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .preview-close {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 20px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .preview-close:hover {
+            background: var(--bg);
+            color: var(--text);
+        }
+        .preview-content {
+            padding: 20px;
+            flex: 1;
+            overflow-y: auto;
+        }
+        .youtube-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .custom-video-container {
+            width: 100%;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .custom-video {
+            width: 100%;
+            border-radius: var(--radius);
+        }
+        .speed-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            padding: 8px;
+            background: var(--bg);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        .speed-label {
+            font-size: 12px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .speed-btn {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .speed-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .speed-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .preview-image {
+            width: 100%;
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+        }
+        .preview-pdf {
+            width: 100%;
+            height: 70vh;
+            border: none;
+            border-radius: var(--radius);
+        }
+        .preview-info {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+        .info-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-light);
+            width: 80px;
+            flex-shrink: 0;
+        }
+        .info-value {
+            font-size: 12px;
+            color: var(--text);
+            flex: 1;
+            word-break: break-all;
+        }
+        .external-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .action-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        .action-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        .action-btn.copy-btn {
+            background: var(--bg);
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .action-btn.copy-btn:hover {
+            background: var(--card);
+        }
+        .footer {
+            text-align: center;
+            padding: 24px 0;
+            margin-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-text {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        .brand {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .codenova-ref {
+            margin-top: 8px;
+            font-size: 11px;
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .header-left {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+            .back-btn {
+                align-self: flex-start;
+            }
+            .header-controls {
+                justify-content: center;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="container">
+            <div class="header">
+                <div class="header-left">
+                    <a href="#" class="back-btn" id="globalBackBtn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="#" class="home-btn" id="globalHomeBtn" style="display: none;">
+                        <i class="fas fa-home"></i>
+                    </a>
+                    <div class="title-section">
+                        <div class="main-title">SSC GD Constable 2026  Study Material </div>
+                        <div class="file-info">
+                            <span><i class="far fa-file-alt"></i> 12 items</span>
+                            <span><i class="far fa-calendar"></i> 23 Jan 2026</span>
+                            <span><i class="far fa-clock"></i> <span class="time-display" id="liveTime"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-controls">
+                    <div class="theme-toggle">
+                        <input type="checkbox" id="themeToggle">
+                        <label class="theme-slider" for="themeToggle">
+                            <div class="theme-icons">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card" data-filter="all" id="statAll">
+                <div class="stat-content">
+                    <div class="stat-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">12</div>
+                        <div class="stat-label">All Items</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" data-filter="video">
+                <div class="stat-content">
+                    <div class="stat-icon video-stat">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">0</div>
+                        <div class="stat-label">Videos</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" data-filter="image">
+                <div class="stat-content">
+                    <div class="stat-icon image-stat">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">0</div>
+                        <div class="stat-label">Images</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" data-filter="audio">
+                <div class="stat-content">
+                    <div class="stat-icon audio-stat">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">0</div>
+                        <div class="stat-label">Audio</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" data-filter="pdf">
+                <div class="stat-content">
+                    <div class="stat-icon pdf-stat">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">12</div>
+                        <div class="stat-label">PDFs</div>
+                    </div>
+                </div>
+            </div>
+            <div class="stat-card" data-filter="other">
+                <div class="stat-content">
+                    <div class="stat-icon other-stat">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="stat-numbers">
+                        <div class="stat-count">0</div>
+                        <div class="stat-label">Others</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="contentSection">
+            <div class="section-header">
+                <div class="section-title" id="sectionTitle">All Content</div>
+                <div class="section-controls">
+                    <button class="filter-btn" id="showAllBtn" style="display:none;">Show All</button>
+                </div>
+                <div class="items-count" id="itemsCount">12 items</div>
+            </div>
+            <div class="cards-grid" id="contentGrid"></div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-text">
+                Generated by <span class="brand">CodeNova Bots</span> • Premium Content Organizer
+            </div>
+            <div class="footer-text codenova-ref">
+                Powered by <span class="brand">CodeNova Systems</span> • Intelligent Content Management
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-overlay" id="previewOverlay">
+        <div class="preview-container">
+            <div class="preview-header">
+                <div class="preview-title" id="previewItemTitle"></div>
+                <button class="preview-close" id="closePreview">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="preview-content" id="previewContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const data = [{"hierarchy": ["English"], "title": "Active Passive Voice.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/5274797b-7efc-4c10-84da-9dc35eeed0ee.pdf", "type": "pdf"}, {"hierarchy": ["Maths"], "title": "Age", "url": "https://cdn-wl-assets.classplus.co/production/351521/58691bb5-6faf-48df-a742-6d75bfc9d40c.pdf", "type": "pdf"}, {"hierarchy": ["Reasoning", "Ranking"], "title": "Ranking part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/482a2cde-1e2d-4727-ba88-2274b2c3d12c.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "Economy"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/7003a09f-e925-4f22-abbb-748fd0303f5c.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "Polity"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/f33d2ff0-644a-44df-81c5-4f7da707065e.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "Static Gk"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/66838314-cf0b-4cb5-8181-fd4a7e6e9cfa.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "Geography"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/1ab5a5f2-5385-4bbf-9923-a9ad54340f12.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "History", "Ancient History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/85bd6cda-d1f0-4317-854f-34cef976668d.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "History", "Medieval History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/cfa2761c-933b-47eb-9148-4636aabd38a1.pdf", "type": "pdf"}, {"hierarchy": ["General Study Hindi", "History", "Modern History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/05a98edd-d609-4cdb-8af0-9d4782a12bb7.pdf", "type": "pdf"}, {"hierarchy": ["General Studies English", "History", "Ancient History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/30a5eda5-e297-44e1-9706-1856d90ab616.pdf", "type": "pdf"}, {"hierarchy": ["General Studies English", "History", "Medieval History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/dae911f3-2579-4ef8-ac83-1d5395c184a2.pdf", "type": "pdf"}];
+        const organizedData = {"_items": [], "_children": {"English": {"_items": [{"hierarchy": ["English"], "title": "Active Passive Voice.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/5274797b-7efc-4c10-84da-9dc35eeed0ee.pdf", "type": "pdf"}], "_children": {}}, "Maths": {"_items": [{"hierarchy": ["Maths"], "title": "Age", "url": "https://cdn-wl-assets.classplus.co/production/351521/58691bb5-6faf-48df-a742-6d75bfc9d40c.pdf", "type": "pdf"}], "_children": {}}, "Reasoning": {"_items": [], "_children": {"Ranking": {"_items": [{"hierarchy": ["Reasoning", "Ranking"], "title": "Ranking part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/482a2cde-1e2d-4727-ba88-2274b2c3d12c.pdf", "type": "pdf"}], "_children": {}}}}, "General Study Hindi": {"_items": [], "_children": {"Economy": {"_items": [{"hierarchy": ["General Study Hindi", "Economy"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/7003a09f-e925-4f22-abbb-748fd0303f5c.pdf", "type": "pdf"}], "_children": {}}, "Polity": {"_items": [{"hierarchy": ["General Study Hindi", "Polity"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/f33d2ff0-644a-44df-81c5-4f7da707065e.pdf", "type": "pdf"}], "_children": {}}, "Static Gk": {"_items": [{"hierarchy": ["General Study Hindi", "Static Gk"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/66838314-cf0b-4cb5-8181-fd4a7e6e9cfa.pdf", "type": "pdf"}], "_children": {}}, "Geography": {"_items": [{"hierarchy": ["General Study Hindi", "Geography"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/1ab5a5f2-5385-4bbf-9923-a9ad54340f12.pdf", "type": "pdf"}], "_children": {}}, "History": {"_items": [], "_children": {"Ancient History": {"_items": [{"hierarchy": ["General Study Hindi", "History", "Ancient History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/85bd6cda-d1f0-4317-854f-34cef976668d.pdf", "type": "pdf"}], "_children": {}}, "Medieval History": {"_items": [{"hierarchy": ["General Study Hindi", "History", "Medieval History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/cfa2761c-933b-47eb-9148-4636aabd38a1.pdf", "type": "pdf"}], "_children": {}}, "Modern History": {"_items": [{"hierarchy": ["General Study Hindi", "History", "Modern History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/05a98edd-d609-4cdb-8af0-9d4782a12bb7.pdf", "type": "pdf"}], "_children": {}}}}}}, "General Studies English": {"_items": [], "_children": {"History": {"_items": [], "_children": {"Ancient History": {"_items": [{"hierarchy": ["General Studies English", "History", "Ancient History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/30a5eda5-e297-44e1-9706-1856d90ab616.pdf", "type": "pdf"}], "_children": {}}, "Medieval History": {"_items": [{"hierarchy": ["General Studies English", "History", "Medieval History"], "title": "Part 1.pdf", "url": "https://cdn-wl-assets.classplus.co/production/351521/dae911f3-2579-4ef8-ac83-1d5395c184a2.pdf", "type": "pdf"}], "_children": {}}}}}}}};
+        let currentPath = [];
+        let currentItems = [];
+        let activeFilter = 'all';
+        let activeMediaElements = [];
+        
+        function updateLiveTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true 
+            });
+            document.getElementById('liveTime').textContent = timeString;
+        }
+        
+        setInterval(updateLiveTime, 1000);
+        updateLiveTime();
+        
+        function renderContent() {
+            const grid = document.getElementById('contentGrid');
+            const sectionTitle = document.getElementById('sectionTitle');
+            const backBtn = document.getElementById('globalBackBtn');
+            const homeBtn = document.getElementById('globalHomeBtn');
+            const itemsCount = document.getElementById('itemsCount');
+            const showAllBtn = document.getElementById('showAllBtn');
+            
+            grid.innerHTML = '';
+            
+            if (currentPath.length === 0) {
+                sectionTitle.textContent = 'All Content';
+                backBtn.style.display = 'none';
+                homeBtn.style.display = 'none';
+                
+                if (activeFilter !== 'all') {
+                    sectionTitle.textContent = `Filtered: ${activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1)}`;
+                    showAllBtn.style.display = 'block';
+                } else {
+                    showAllBtn.style.display = 'none';
+                }
+                
+                if (organizedData._items.length > 0) {
+                    let itemsToShow = organizedData._items;
+                    if (activeFilter !== 'all') {
+                        itemsToShow = organizedData._items.filter(item => item.type === activeFilter);
+                    }
+                    renderItemCards(itemsToShow, grid);
+                }
+                
+                if (Object.keys(organizedData._children).length > 0) {
+                    let categoriesToShow = organizedData._children;
+                    renderCategoryCards(categoriesToShow, grid, activeFilter);
+                }
+                
+                const totalItems = (activeFilter === 'all' ? organizedData._items.length : organizedData._items.filter(item => item.type === activeFilter).length);
+                itemsCount.textContent = `${totalItems} items`;
+            } else {
+                const pathString = currentPath.join(' › ');
+                sectionTitle.textContent = pathString;
+                backBtn.style.display = 'flex';
+                homeBtn.style.display = 'flex';
+                showAllBtn.style.display = 'none';
+                
+                let current = organizedData._children;
+                for (const key of currentPath.slice(0, -1)) {
+                    current = current[key]._children;
+                }
+                
+                const lastKey = currentPath[currentPath.length - 1];
+                const target = current[lastKey];
+                
+                if (target._items.length > 0) {
+                    let itemsToShow = target._items;
+                    if (activeFilter !== 'all') {
+                        itemsToShow = target._items.filter(item => item.type === activeFilter);
+                    }
+                    renderItemCards(itemsToShow, grid);
+                }
+                
+                if (Object.keys(target._children).length > 0) {
+                    renderCategoryCards(target._children, grid, activeFilter);
+                }
+                
+                const totalItems = (activeFilter === 'all' ? target._items.length : target._items.filter(item => item.type === activeFilter).length);
+                itemsCount.textContent = `${totalItems} items`;
+            }
+            
+            updateStatCards();
+        }
+        
+        function updateStatCards() {
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.classList.remove('active');
+                if (card.dataset.filter === activeFilter) {
+                    card.classList.add('active');
+                }
+            });
+        }
+        
+        function countChildrenItems(children, filter = 'all') {
+            let count = 0;
+            for (const key in children) {
+                if (filter === 'all') {
+                    count += children[key]._items.length;
+                } else {
+                    count += children[key]._items.filter(item => item.type === filter).length;
+                }
+                count += countChildrenItems(children[key]._children, filter);
+            }
+            return count;
+        }
+        
+        function renderCategoryCards(categories, container, filter = 'all') {
+            for (const [key, category] of Object.entries(categories)) {
+                const totalItems = filter === 'all' ? category._items.length : category._items.filter(item => item.type === filter).length;
+                const filteredSubCount = countChildrenItems(category._children, filter);
+                
+                if (totalItems === 0 && filteredSubCount === 0) continue;
+                
+                const card = document.createElement('div');
+                card.className = 'category-card';
+                card.onclick = () => navigateToCategory(key);
+                
+                card.innerHTML = `
+                    <div class="category-title">
+                        <div class="category-icon">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        ${key}
+                    </div>
+                    <div class="category-meta">
+                        <span>${totalItems} direct items</span>
+                        <span>${Object.keys(category._children).length} sub-categories</span>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            }
+        }
+        
+        function renderItemCards(items, container) {
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'item-card';
+                card.onclick = () => showPreview(item);
+                
+                const typeClasses = {
+                    'video': 'video-type',
+                    'image': 'image-type',
+                    'audio': 'audio-type',
+                    'pdf': 'pdf-type',
+                    'other': 'other-type'
+                };
+                
+                const typeIcons = {
+                    'video': 'fa-video',
+                    'image': 'fa-image',
+                    'audio': 'fa-music',
+                    'pdf': 'fa-file-pdf',
+                    'other': 'fa-file-alt'
+                };
+                
+                card.innerHTML = `
+                    <div class="item-header">
+                        <div class="item-title">
+                            <i class="fas ${typeIcons[item.type]}" style="margin-right: 6px; font-size: 11px;"></i>
+                            ${item.title}
+                        </div>
+                        <div class="item-type ${typeClasses[item.type]}">
+                            ${item.type.toUpperCase()}
+                        </div>
+                    </div>
+                    <div class="item-url">
+                        ${item.url}
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+        
+        function navigateToCategory(key) {
+            currentPath.push(key);
+            renderContent();
+        }
+        
+        function goBack() {
+            if (currentPath.length > 0) {
+                currentPath.pop();
+                renderContent();
+            }
+        }
+        
+        function goHome() {
+            currentPath = [];
+            activeFilter = 'all';
+            renderContent();
+        }
+        
+        function applyFilter(filterType) {
+            activeFilter = filterType;
+            renderContent();
+        }
+        
+        function isYouTubeUrl(url) {
+            return url.includes('youtube.com') || url.includes('youtu.be');
+        }
+        
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length == 11) ? match[2] : false;
+        }
+        
+        function createSpeedControls(videoElement) {
+            const speeds = [0.5, 0.75, 1, 1.25, 1.5, 2];
+            const container = document.createElement('div');
+            container.className = 'speed-controls';
+            
+            const label = document.createElement('span');
+            label.className = 'speed-label';
+            label.textContent = 'Speed:';
+            container.appendChild(label);
+            
+            speeds.forEach(speed => {
+                const btn = document.createElement('button');
+                btn.className = 'speed-btn';
+                if (speed === 1) btn.classList.add('active');
+                btn.textContent = speed + 'x';
+                btn.onclick = () => {
+                    videoElement.playbackRate = speed;
+                    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                };
+                container.appendChild(btn);
+            });
+            
+            return container;
+        }
+        
+        function stopAllMedia() {
+            activeMediaElements.forEach(media => {
+                if (media && typeof media.pause === 'function') {
+                    media.pause();
+                    media.currentTime = 0;
+                }
+            });
+            activeMediaElements = [];
+            
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const src = iframe.src;
+                iframe.src = '';
+                iframe.src = src;
+            });
+        }
+        
+        function showPreview(item) {
+            const overlay = document.getElementById('previewOverlay');
+            const title = document.getElementById('previewItemTitle');
+            const content = document.getElementById('previewContent');
+            
+            title.textContent = item.title;
+            
+            let previewHTML = '';
+            activeMediaElements = [];
+            
+            if (item.type === 'video') {
+                if (isYouTubeUrl(item.url)) {
+                    const videoId = extractYouTubeId(item.url);
+                    if (videoId) {
+                        previewHTML = `
+                            <div class="youtube-container">
+                                <iframe 
+                                    width="100%" 
+                                    height="100%" 
+                                    src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        `;
+                    } else {
+                        previewHTML = createExternalPreview(item);
+                    }
+                } else {
+                    previewHTML = `
+                        <div class="custom-video-container">
+                            <video class="custom-video" controls>
+                                <source src="${item.url}" type="video/mp4">
+                                Your browser does not support video playback.
+                            </video>
+                        </div>
+                    `;
+                }
+            } else if (item.type === 'image') {
+                previewHTML = `
+                    <img class="preview-image" src="${item.url}" alt="${item.title}">
+                `;
+            } else if (item.type === 'pdf') {
+                previewHTML = `
+                    <iframe class="preview-pdf" src="${item.url}"></iframe>
+                `;
+            } else if (item.type === 'audio') {
+                previewHTML = `
+                    <audio class="custom-video" controls>
+                        <source src="${item.url}" type="audio/mpeg">
+                        Your browser does not support audio playback.
+                    </audio>
+                `;
+            } else {
+                previewHTML = createExternalPreview(item);
+            }
+            
+            const showUrlSection = item.type === 'other' || (item.type === 'video' && isYouTubeUrl(item.url) && !extractYouTubeId(item.url));
+            
+            previewHTML += `
+                <div class="preview-info">
+                    <div class="info-row">
+                        <div class="info-label">Type:</div>
+                        <div class="info-value">${item.type.toUpperCase()}</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Title:</div>
+                        <div class="info-value">${item.title}</div>
+                    </div>
+                    ${item.hierarchy.length > 0 ? `
+                    <div class="info-row">
+                        <div class="info-label">Path:</div>
+                        <div class="info-value">${item.hierarchy.join(' › ')}</div>
+                    </div>
+                    ` : ''}
+                    ${showUrlSection ? `
+                    <div class="info-row">
+                        <div class="info-label">URL:</div>
+                        <div class="info-value">
+                            <a href="${item.url}" target="_blank" style="color: var(--primary); text-decoration: none;">
+                                ${item.url.substring(0, 80)}${item.url.length > 80 ? '...' : ''}
+                            </a>
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
+            `;
+            
+            content.innerHTML = previewHTML;
+            
+            if (item.type === 'video' && !isYouTubeUrl(item.url)) {
+                setTimeout(() => {
+                    const videoElement = content.querySelector('video');
+                    if (videoElement) {
+                        activeMediaElements.push(videoElement);
+                        const speedControls = createSpeedControls(videoElement);
+                        const container = content.querySelector('.custom-video-container');
+                        if (container) {
+                            container.appendChild(speedControls);
+                        }
+                    }
+                }, 100);
+            }
+            
+            if (item.type === 'audio') {
+                setTimeout(() => {
+                    const audioElement = content.querySelector('audio');
+                    if (audioElement) {
+                        activeMediaElements.push(audioElement);
+                    }
+                }, 100);
+            }
+            
+            if (showUrlSection) {
+                const externalActions = document.createElement('div');
+                externalActions.className = 'external-actions';
+                externalActions.innerHTML = `
+                    <button class="action-btn copy-btn" onclick="copyToClipboard('${item.url}')">
+                        <i class="fas fa-copy"></i> Copy Link
+                    </button>
+                    <a href="${item.url}" target="_blank" class="action-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Link
+                    </a>
+                `;
+                content.querySelector('.preview-info').appendChild(externalActions);
+            }
+            
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function createExternalPreview(item) {
+            return `
+                <div style="text-align: center; padding: 40px 0;">
+                    <i class="fas fa-external-link-alt" style="font-size: 48px; color: var(--text-light); margin-bottom: 20px;"></i>
+                    <p style="color: var(--text-light); margin-bottom: 24px;">External Resource</p>
+                </div>
+            `;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target.closest('.action-btn');
+                const originalHtml = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                btn.style.background = '#10b981';
+                btn.style.color = 'white';
+                btn.style.borderColor = '#10b981';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHtml;
+                    btn.style.background = '';
+                    btn.style.color = '';
+                    btn.style.borderColor = '';
+                }, 2000);
+            });
+        }
+        
+        document.getElementById('globalBackBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            goBack();
+        });
+        
+        document.getElementById('globalHomeBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            goHome();
+        });
+        
+        document.getElementById('showAllBtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            goHome();
+        });
+        
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const filterType = card.dataset.filter;
+                applyFilter(filterType);
+            });
+        });
+        
+        document.getElementById('closePreview').addEventListener('click', () => {
+            stopAllMedia();
+            document.getElementById('previewOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        document.getElementById('previewOverlay').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('previewOverlay')) {
+                stopAllMedia();
+                document.getElementById('previewOverlay').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        document.getElementById('themeToggle').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', this.checked ? 'dark' : 'light');
+        });
+        
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('themeToggle').checked = true;
+        }
+        
+        renderContent();
+    </script>
+</body>
+</html>
